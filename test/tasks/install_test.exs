@@ -16,7 +16,8 @@ defmodule Mix.Tasks.Bloom.InstallTest do
   describe "run/1" do
     test "installs a component if it exists" do
       expect(ShellMock, :info, fn msg ->
-        assert msg == "glow_button component installed successfully."
+        assert msg ==
+                 "glow_button component installed successfully ✅ - lib/bloom_web/components/glow_button.ex"
       end)
 
       Mix.Tasks.Bloom.Install.run(["glow_button"])
@@ -59,21 +60,11 @@ defmodule Mix.Tasks.Bloom.InstallTest do
 
     test "creates component file and writes updated source code", %{project_name: _project_name} do
       expect(ShellMock, :info, fn msg ->
-        assert msg == "glow_button component installed successfully."
+        assert msg ==
+                 "glow_button component installed successfully ✅ - lib/bloom_web/components/glow_button.ex"
       end)
 
       Mix.Tasks.Bloom.Install.install_component("glow_button")
-    end
-  end
-
-  describe "retrieve_source_code/1" do
-    test "returns source code if file exists" do
-      assert {:ok, _code} = Mix.Tasks.Bloom.Install.retrieve_source_code("glow_button")
-    end
-
-    test "returns error if file does not exist" do
-      assert {:error, _reason} =
-               Mix.Tasks.Bloom.Install.retrieve_source_code("nonexistent_component")
     end
   end
 end
