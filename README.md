@@ -2,9 +2,11 @@
 
 # Bloom
 
-The opinionated extension to Phoenix core_components.
+The opinionated extension to Phoenix core_components, inspired by [shadcn](https://ui.shadcn.com).
 
-Inspired by shad-cn.
+A set of HEEX components that can be independently installed and edited to your hearts content.
+
+Working both with Live and dead controller views, written in HEEX using TailwindCSS and designed to be bolted onto applications using Phoenix Core Components.
 
 ## Installation
 
