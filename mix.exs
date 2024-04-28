@@ -11,7 +11,7 @@ defmodule Bloom.MixProject do
       app_src: ["lib", "lib/bloom/components"],
       package: package(),
       templates: ~w(priv/templates),
-      description: "An Opinionated extention to Phoenix core_components."
+      description: "An Opinionated extension to Phoenix core_components."
     ]
   end
 

@@ -2,7 +2,7 @@
 
 # Bloom
 
-The opinionated extention to Phoenix core_components.
+The opinionated extension to Phoenix core_components.
 
 Inspired by shad-cn.
 
