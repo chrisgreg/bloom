@@ -2,6 +2,17 @@ defmodule Mix.Tasks.Bloom.Install do
   @moduledoc "Mix task to install components from the Bloom library"
   use Mix.Task
 
+  @doc """
+  Run the mix task with the component name as an argument to install the component.
+
+  ## Examples
+
+      iex> Mix.Tasks.Bloom.Install.run(["component_name"])
+      "component_name component installed successfully."
+
+      iex> Mix.Tasks.Bloom.Install.run(["nonexistent_component"])
+      "Component not found: nonexistent_component"
+  """
   @impl true
   def run(args) do
     case args do
