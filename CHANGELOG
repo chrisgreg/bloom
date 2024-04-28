@@ -2,6 +2,18 @@
 
 All notable changes to the "Bloom" project will be documented in this file.
 
+### [0.0.2] - 2024-05-29
+
+#### Added
+
+- Mix tasks for generating templates from Bloom component files
+
+#### Changed
+
+- Changed generation to use templates instead of manually copying files
+- Updated read me to account for Tailwind safelisting fix
+- Fixed tests
+
 ### [0.0.1] - 2024-05-28
 
 #### Added
