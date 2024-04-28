@@ -1,6 +1,9 @@
+![Bloom](/priv/images/bloom.png)
+
 # Bloom
 
 The opinionated extention to Phoenix core_components.
+
 Inspired by shad-cn.
 
 ## Installation
@@ -14,6 +17,8 @@ def deps do
   ]
 end
 ```
+
+Relies on Phoenix being installed.
 
 ## Installing components
 
@@ -32,6 +37,10 @@ mix bloom.install help
 ```
 
 ## Frequently Asked Questions
+
+### Why are the components manually installed?
+
+So you can customise them to your hearts content and make them your own easily. The source code of the components will live in your project so you can tweak them as you see fit.
 
 ### The colours aren't showing up!
 
@@ -59,3 +68,11 @@ Recommended safelist:
     },
   ],
 ```
+
+### There aren't many components
+
+I'm gonna be adding components slowly but this repo welcomes contributions for beautiful, useful components not already covered by the excellent core_components that ship with Phoenix.
+
+### How do I preview these components?
+
+I'm going to be adding a Storybook and website soon.
