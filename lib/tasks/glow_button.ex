@@ -6,7 +6,7 @@ defmodule Mix.Tasks.Bloom.Install do
   def run(args) do
     case args do
       ["glow_button"] ->
-        install_glow_button()
+        install_component("GlowButton")
 
       _ ->
         Mix.shell().info("Usage: mix bloom.install [component_name]")
@@ -14,51 +14,50 @@ defmodule Mix.Tasks.Bloom.Install do
     end
   end
 
-  defp component_dir(app_name), do: "lib/#{app_name}_web/components"
+  defp install_component(component_name) do
+    component_name = Macro.underscore(component_name)
+    module = String.to_atom("Bloom.Components.#{component_name}")
+    project_name = Mix.Project.config()[:app] |> Atom.to_string() |> String.downcase()
 
-  defp create_component_dir(app_name) do
-    component_dir(app_name)
-    |> File.mkdir_p()
-  end
+    case retrieve_source_code(module) do
+      {:ok, source_code} ->
+        component_dir = component_dir(project_name)
 
-  defp install_glow_button do
-    project_name = Mix.Project.config()[:app] |> Atom.to_string()
+        # Create component directory if it doesn't exist
+        File.mkdir_p(component_dir)
+        target_path = "#{component_dir}/#{component_name}.ex"
 
-    file_content = """
-    defmodule #{project_name}.Components.GlowButton do
-      use Phoenix.Component
+        # Replace component name in source code
+        module_name = project_name |> Macro.camelize()
 
-      attr(:parent_class, :string, default: "", doc: "CSS class for parent div")
-      attr(:class, :string, default: "", doc: "CSS class for button")
+        updated_source_code =
+          Regex.replace(~r/Bloom\.Components/, source_code, "#{module_name}Web.Components")
 
-      attr(:from_color, :string, default: "lime")
-      attr(:to_color, :string, default: "emerald")
+        File.write!(target_path, updated_source_code)
+        Mix.shell().info("#{component_name} component installed successfully.")
 
-      attr(:text_color, :string, default: "gray")
-      attr(:background_color, :string, default: "black")
-
-      attr(:rest, :global)
-      slot(:inner_block, required: true)
-
-      def glow_button(assigns) do
-        ~H\\"\\"\"
-          <div>
-            <div class={["w-fit mx-auto relative", @parent_class]} {@rest}>
-              <div class="group-hover:opacity-100 animate-tilt transition duration-1000 group-hover:duration-200 absolute blur-lg opacity-75 -inset-0.5 group-hover:-inset-1 bg-gradient-to-r from-lime-300 to-emerald-300 rounded-lg"></div>
-              <button class={["relative px-7 py-4 bg-black rounded-lg leading-none", @class]}>
-                <span class="text-gray-100 font-medium group-hover:text-lime-300 transition-all duration-200">
-                  <%= render_slot(@inner_block) %>
-                </span>
-              </button>
-            </div>
-          </div>
-        \\"\\"\\"
-      end
+      {:error, reason} ->
+        Mix.shell().info("Error: #{reason}")
     end
-    """
-
-    create_component_dir(project_name)
-    File.write!("lib/#{project_name}_web/components/glow_button.ex", file_content)
-    Mix.shell().info("GlowButton component installed successfully.")
   end
+
+  defp retrieve_source_code(module) do
+    # Assuming the module is in the "Bloom.Components" namespace
+    module_name =
+      Atom.to_string(module)
+      |> String.split(".")
+      |> List.last()
+      |> Macro.underscore()
+
+    # Assuming the source files are in the "lib/bloom/components" directory
+    source_file = "lib/bloom/components/#{String.downcase(module_name)}.ex"
+
+    if File.exists?(source_file) do
+      {:ok, File.read!(source_file)}
+    else
+      {:error, "Source file not found: #{source_file}"}
+    end
+  end
+
+  defp component_dir(app_name), do: "lib/#{app_name}_web/components" |> String.downcase()
 end
