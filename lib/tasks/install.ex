@@ -5,6 +5,9 @@ defmodule Mix.Tasks.Bloom.Install do
   @impl true
   def run(args) do
     case args do
+      ["help"] ->
+        print_usage_and_components()
+
       [component_name] ->
         if component_exists?(component_name) do
           install_component(component_name)
