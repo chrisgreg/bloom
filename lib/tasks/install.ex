@@ -5,12 +5,16 @@ defmodule Mix.Tasks.Bloom.Install do
   @impl true
   def run(args) do
     case args do
-      ["glow_button"] ->
-        install_component("glow_button")
+      [component_name] ->
+        if component_exists?(component_name) do
+          install_component(component_name)
+        else
+          Mix.shell().error("Component not found: #{component_name}")
+          print_usage_and_components()
+        end
 
       _ ->
-        Mix.shell().info("Usage: mix bloom.install [component_name]")
-        Mix.shell().info("Available components: glow_button")
+        print_usage_and_components()
     end
   end
 
@@ -47,4 +51,14 @@ defmodule Mix.Tasks.Bloom.Install do
   end
 
   defp component_dir(app_name), do: "lib/#{app_name}_web/components" |> String.downcase()
+
+  defp print_usage_and_components do
+    Mix.shell().info("Usage: mix bloom.install [component_name]")
+    Mix.shell().info("Available components: glow_button")
+  end
+
+  defp component_exists?(file_name) do
+    source_file = "lib/bloom/components/#{file_name}.ex"
+    File.exists?(source_file)
+  end
 end
