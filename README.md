@@ -1,11 +1,11 @@
 # Bloom
 
-**TODO: Add description**
+The opinionated extention to Phoenix core_components.
+Inspired by shad-cn.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `bloom` to your list of dependencies in `mix.exs`:
+Can be installed by adding `bloom` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +15,21 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/bloom>.
+## Installing components
 
+#### All components can be installed by running the following mix command in your project root
+
+```
+mix bloom.install <component_name>
+```
+
+#### View all components by running:
+
+```
+mix bloom.install help
+```
+
+## Components to add
+
+- [x] Glow Button
+- [] Gradient Text

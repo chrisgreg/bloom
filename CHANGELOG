@@ -1,0 +1,28 @@
+## Changelog
+
+All notable changes to the "Bloom" project will be documented in this file.
+
+### [0.1.0] - 2024-05-28
+
+#### Added
+
+- Initial release of the Bloom extension for Phoenix.
+- Components added:
+  - Glow Button component with customisable colors and effects.
+- Mix tasks for installing components (`mix bloom.install`).
+
+#### Changed
+
+- N/A
+
+#### Fixed
+
+- N/A
+
+#### Removed
+
+- N/A
+
+### [Unreleased]
+
+- Planning to add more interactive components and enhance existing features based on user feedback.

@@ -7,7 +7,19 @@ defmodule Bloom.MixProject do
       version: "0.1.0",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package(),
+      description: "An Opinionated extention to Phoenix core_components."
+    ]
+  end
+
+  defp package() do
+    [
+      name: "bloom",
+      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
+                license* CHANGELOG* changelog* src),
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/chrisgreg/bloom"}
     ]
   end
 
