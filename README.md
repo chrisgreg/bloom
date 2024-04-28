@@ -23,6 +23,8 @@ end
 mix bloom.install <component_name>
 ```
 
+Some components require Tailwind Config changes - refer to the component doc for more information.
+
 #### View all components by running:
 
 ```
