@@ -33,34 +33,24 @@ defmodule Mix.Tasks.Bloom.Install do
   end
 
   def install_component(file_name) do
+    env = Mix.env() |> Atom.to_string()
     project_name = Mix.Project.config()[:app] |> Atom.to_string() |> String.downcase()
-
-    case retrieve_source_code(file_name) do
-      {:ok, source_code} ->
-        component_dir = component_dir(project_name)
-        File.mkdir_p(component_dir)
-        target_path = "#{component_dir}/#{file_name}.ex"
-
-        module_name = project_name |> Macro.camelize()
-
-        updated_source_code =
-          Regex.replace(~r/Bloom\.Components/, source_code, "#{module_name}Web.Components")
-
-        File.write!(target_path, updated_source_code)
-        Mix.shell().info("#{file_name} component installed successfully.")
-
-      {:error, reason} ->
-        Mix.shell().info("Error: #{reason}")
-    end
-  end
-
-  def retrieve_source_code(file_name) do
-    source_file = "lib/bloom/components/#{file_name}.ex"
+    source_file = "_build/#{env}/lib/bloom/priv/templates/#{file_name}.ex"
 
     if File.exists?(source_file) do
-      {:ok, File.read!(source_file)}
+      component_dir = component_dir(project_name)
+      File.mkdir_p(component_dir)
+      target_path = "#{component_dir}/#{file_name}.ex"
+
+      module_name = project_name |> Macro.camelize()
+
+      source_code =
+        EEx.eval_file(source_file, module_name: module_name, assigns: %{module_name: module_name})
+
+      File.write!(target_path, source_code)
+      Mix.shell().info("#{file_name} component installed successfully ✅ - #{target_path}")
     else
-      {:error, "Source file not found: #{source_file}"}
+      Mix.shell().info("Template not found: #{source_file}")
     end
   end
 
@@ -72,7 +62,8 @@ defmodule Mix.Tasks.Bloom.Install do
   end
 
   defp component_exists?(file_name) do
-    source_file = "lib/bloom/components/#{file_name}.ex"
+    env = Mix.env() |> Atom.to_string()
+    source_file = "_build/#{env}/lib/bloom/priv/templates/#{file_name}.ex"
     File.exists?(source_file)
   end
 end

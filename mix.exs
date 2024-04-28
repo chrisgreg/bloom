@@ -4,11 +4,13 @@ defmodule Bloom.MixProject do
   def project do
     [
       app: :bloom,
-      version: "0.1.0",
+      version: "0.0.1",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      app_src: ["lib", "lib/bloom/components"],
       package: package(),
+      templates: ~w(lib/bloom/components/*.ex),
       description: "An Opinionated extention to Phoenix core_components."
     ]
   end
@@ -16,8 +18,8 @@ defmodule Bloom.MixProject do
   defp package() do
     [
       name: "bloom",
-      files: ~w(lib priv .formatter.exs mix.exs README* readme* LICENSE*
-                license* CHANGELOG* changelog* src),
+      files: ~w(lib/tasks lib/bloom/components .formatter.exs mix.exs README* LICENSE*
+                CHANGELOG*),
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/chrisgreg/bloom"}
     ]
@@ -37,7 +39,8 @@ defmodule Bloom.MixProject do
       {:phoenix_live_view, "~> 0.20"},
       {:phoenix_html, "~> 4.0"},
       {:phoenix_html_helpers, "~> 1.0"},
-      {:mox, "~> 1.0", only: :test}
+      {:mox, "~> 1.0", only: :test},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
