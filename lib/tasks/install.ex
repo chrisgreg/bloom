@@ -18,7 +18,7 @@ defmodule Mix.Tasks.Bloom.Install do
     end
   end
 
-  defp install_component(file_name) do
+  def install_component(file_name) do
     project_name = Mix.Project.config()[:app] |> Atom.to_string() |> String.downcase()
 
     case retrieve_source_code(file_name) do
@@ -40,7 +40,7 @@ defmodule Mix.Tasks.Bloom.Install do
     end
   end
 
-  defp retrieve_source_code(file_name) do
+  def retrieve_source_code(file_name) do
     source_file = "lib/bloom/components/#{file_name}.ex"
 
     if File.exists?(source_file) do
