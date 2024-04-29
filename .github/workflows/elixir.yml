@@ -32,27 +32,15 @@ jobs:
       - name: Run tests
         run: mix test
 
-    publish:
-      needs: build
-      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-      runs-on: ubuntu-latest
-      steps:
-        - name: Check out
-          uses: actions/checkout@v3
+  publish:
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
 
-        - name: Set up Elixir
-          uses: erlef/setup-beam@61e01a43a562a89bfc54c7f9a378ff67b03e4a21 # v1.16.0
-          with:
-            elixir-version: "1.16"
-            otp-version: "26.0"
-
-        - name: Install dependencies
-          run: mix deps.get
-
-        - name: Compile the project
-          run: mix compile
-
-        - name: Publish to Hex.pm
-          uses: erlangpack/github-action@v3
-          env:
-            HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
+      - name: Publish to Hex.pm
+        uses: erlangpack/github-action@v3
+        env:
+          HEX_API_KEY: ${{ secrets.HEX_API_KEY }}
