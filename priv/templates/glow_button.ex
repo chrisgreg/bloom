@@ -6,6 +6,7 @@ defmodule <%= @module_name %>Web.Components.GlowButton do
 
   Requires the following Tailwind CSS config extension:
 
+  ...
   extend: {
       animation: {
         tilt: "tilt 5s ease-in-out infinite",
