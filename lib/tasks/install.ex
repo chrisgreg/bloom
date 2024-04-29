@@ -62,7 +62,7 @@ defmodule Mix.Tasks.Bloom.Install do
 
   defp print_usage_and_components do
     Mix.shell().info("Usage: mix bloom.install [component_name]")
-    Mix.shell().info("Available components: glow_button")
+    Mix.shell().info("Available components: glow_button | code_snippet | hero | gradient_text")
   end
 
   defp component_exists?(file_name) do
