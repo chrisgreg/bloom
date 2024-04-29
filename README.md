@@ -103,3 +103,12 @@ I'm gonna be adding components slowly but this repo welcomes contributions for b
 ### How do I preview these components?
 
 I'm going to be adding a Storybook and website soon.
+
+## Contribution
+
+- Create your component in lib/bloom/components
+- Adhere to Phoenix component standards
+- Ensure any Tailwind config changes are documented in the @moduledoc
+- Run `mix bloom.generate_templates` when ready to submit
+- Increase semantic versioning for new publish
+- Raise pull request

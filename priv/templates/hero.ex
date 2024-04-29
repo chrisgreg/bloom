@@ -12,17 +12,17 @@ defmodule <%= @module_name %>Web.Components.Hero do
 
   def hero(assigns) do
     ~H"""
-      <div class={["container mx-auto px-4 py-20", @class]}>
-        <span class="text-4xl font-semibold">
-          <%%= render_slot(@inner_block) %>
-        </span>
-        <div class="mt-10 flex justify-center">
-          <%%= render_slot(@subtitle) %>
-        </div>
-        <div class="mt-10 flex justify-center">
-          <%%= render_slot(@actions) %>
-        </div>
+    <div class={["container mx-auto px-4 py-8", @class]}>
+      <div class="text-8xl text-center font-bold text-pretty">
+        <h1><%%= render_slot(@inner_block) %></h1>
       </div>
+      <div class="mt-6 text-center text-2xl flex justify-center font-medium text-pretty">
+        <%%= render_slot(@subtitle) %>
+      </div>
+      <div class="mt-14 flex justify-center flex-row gap-4 items-center">
+        <%%= render_slot(@actions) %>
+      </div>
+    </div>
     """
   end
 end

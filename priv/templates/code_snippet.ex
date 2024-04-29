@@ -8,7 +8,7 @@ defmodule <%= @module_name %>Web.Components.CodeSnippet do
   attr(:parent_class, :string, default: "", doc: "CSS class for parent div")
   attr(:class, :string, default: "", doc: "CSS class for code snippet")
 
-  attr(:background_color, :string, default: "zinc-700")
+  attr(:background_color, :string, default: "zinc-800")
   attr(:text_color, :string, default: "stone-300")
 
   attr(:delimiter, :string, default: "$")
@@ -18,7 +18,11 @@ defmodule <%= @module_name %>Web.Components.CodeSnippet do
 
   def code_snippet(assigns) do
     ~H"""
-    <div class={["w-fit min-w-[18rem] rounded-xl bg-#{@background_color} py-5 text-#{@text_color}", @parent_class]} {@rest}>
+    <div
+      class={[
+        "w-fit min-w-[18rem] rounded-xl bg-#{@background_color} py-5 text-#{@text_color}",
+        @parent_class
+      ]} {@rest}>
       <div class="mb-4 block h-3 w-3 rounded-full opacity-30 shadow-[1.4em_0,2.8em_0,4.2em_0]"></div>
       <pre
         before={@delimiter}
