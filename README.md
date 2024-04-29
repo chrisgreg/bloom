@@ -1,6 +1,7 @@
-![Bloom](/priv/images/bloom.png)
+<p align="center">
+  <img src="https://github.com/chrisgreg/bloom/raw/main/priv/images/bloom.png" width="256" alt="Bloom Logo" />
 
-# Bloom
+  <h1 align="center">Bloom</h1>
 
 The opinionated extension to Phoenix core_components, inspired by [shadcn](https://ui.shadcn.com).
 
@@ -8,6 +9,7 @@ A set of HEEX components that can be independently installed and edited to your 
 
 Working both with Live and dead controller views, written in HEEX using TailwindCSS and designed to be bolted onto applications using Phoenix Core Components.
 
+</p>
 ## Installation
 
 Can be installed by adding `bloom` to your list of dependencies in `mix.exs`:
