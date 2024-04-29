@@ -7,6 +7,9 @@ All notable changes to the "Bloom" project will be documented in this file.
 #### Added
 
 - Mix tasks for generating templates from Bloom component files
+- Code snippet component
+- Gradient text component
+- Hero component
 
 #### Changed
 
