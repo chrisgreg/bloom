@@ -49,6 +49,10 @@ defmodule Mix.Tasks.Bloom.Install do
 
       File.write!(target_path, source_code)
       Mix.shell().info("#{file_name} component installed successfully ✅ - #{target_path}")
+
+      Mix.shell().info(
+        "Don't forget to import the component to your #{project_name |> Macro.underscore()}_web.ex` file."
+      )
     else
       Mix.shell().info("Template not found: #{source_file}")
     end

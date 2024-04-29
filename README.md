@@ -3,6 +3,12 @@
 
   <h1 align="center">Bloom</h1>
 
+<p align="center">
+  <img src="https://img.shields.io/hexpm/dt/bloom" alt="Hex.pm Downloads" />
+  <img src="https://img.shields.io/hexpm/v/bloom" alt="Hex.pm Version" />
+  <img src="https://img.shields.io/hexpm/l/bloom" alt="Hex.pm License" />
+</p>
+
 The opinionated extension to Phoenix core_components, inspired by [shadcn](https://ui.shadcn.com).
 
 A set of HEEX components that can be independently installed and edited to your hearts content.
@@ -10,6 +16,7 @@ A set of HEEX components that can be independently installed and edited to your 
 Working both with Live and dead controller views, written in HEEX using TailwindCSS and designed to be bolted onto applications using Phoenix Core Components.
 
 </p>
+
 ## Installation
 
 Can be installed by adding `bloom` to your list of dependencies in `mix.exs`:

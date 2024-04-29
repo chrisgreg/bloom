@@ -6,6 +6,7 @@ defmodule Bloom.Components.GlowButton do
 
   Requires the following Tailwind CSS config extension:
 
+  ...
   extend: {
       animation: {
         tilt: "tilt 5s ease-in-out infinite",
@@ -34,15 +35,13 @@ defmodule Bloom.Components.GlowButton do
 
   def glow_button(assigns) do
     ~H"""
-      <div>
-        <div class={["w-fit mx-auto relative", @parent_class]} {@rest}>
-          <div class={"group-hover:opacity-100 animate-tilt transition duration-1000 group-hover:duration-200 absolute blur-lg opacity-75 -inset-0.5 group-hover:-inset-1 bg-gradient-to-r from-#{@from_color} to-#{@to_color} rounded-lg"}></div>
+      <div class={["w-fit relative", @parent_class]} {@rest}>
+        <div class={"group-hover:opacity-100 animate-tilt transition duration-1000 group-hover:duration-200 absolute blur-lg opacity-75 -inset-0.5 group-hover:-inset-1 bg-gradient-to-r from-#{@from_color} to-#{@to_color} rounded-lg"}></div>
           <button class={["relative px-7 py-4 bg-black rounded-lg leading-none", @class]}>
             <span class={"text-#{@text_color} font-medium group-hover:text-#{@from_color} transition-all duration-200"}>
               <%= render_slot(@inner_block) %>
             </span>
-          </button>
-        </div>
+        </button>
       </div>
     """
   end
