@@ -17,6 +17,10 @@ Working both with Live and dead controller views, written in HEEX using Tailwind
 
 </p>
 
+## Demo
+
+Visit [the demo](https://bloom-ui.fly.dev/) site to see a Phoenix Storybook of Bloom components.
+
 ## Installation
 
 Can be installed by adding `bloom` to your list of dependencies in `mix.exs`:
@@ -112,3 +116,4 @@ I'm going to be adding a Storybook and website soon.
 - Run `mix bloom.generate_templates` when ready to submit
 - Increase semantic versioning for new publish
 - Raise pull request
+- Add Storybook story to [Bloom Site](https://github.com/chrisgreg/bloom_site) to demo component
