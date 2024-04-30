@@ -118,6 +118,8 @@ This isn't a complete package yet - hence the version.
 - Ways of collocating JS in an easy way until LiveView 1.0.
 - Making the components better, mobile friendly, dark/light themes, standardising props
 - Adding loads more components
+- Reporting which Tailwind classes to safelist after publishing
+- Turning this and the demo site into an umbrella application with git subdirectories
 
 ## Contribution
 
