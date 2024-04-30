@@ -108,6 +108,17 @@ I'm gonna be adding components slowly but this repo welcomes contributions for b
 
 I'm going to be adding a Storybook and website soon.
 
+## What needs work?
+
+Everything!
+
+This isn't a complete package yet - hence the version.
+
+- Plenty of work to be done around the developer experience extracting the docs and making the installation of components even easier.
+- Ways of collocating JS in an easy way until LiveView 1.0.
+- Making the components better, mobile friendly, dark/light themes, standardising props
+- Adding loads more components
+
 ## Contribution
 
 - Create your component in lib/bloom/components
