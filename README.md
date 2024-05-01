@@ -129,4 +129,4 @@ This isn't a complete package yet - hence the version.
 - Run `mix bloom.generate_templates` when ready to submit
 - Increase semantic versioning for new publish
 - Raise pull request
-- Add Storybook story to [Bloom Site](https://github.com/chrisgreg/bloom_site) to demo component
+- Add Storybook story to [the bloom-ui site](https://github.com/chrisgreg/bloom/bloom_site) to demo component
