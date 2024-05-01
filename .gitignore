@@ -28,3 +28,43 @@ bloom-*.tar
 /tmp/
 
 .DS_Store
+
+# The directory Mix will write compiled artifacts to.
+/bloom_site/_build/
+
+# If you run "mix test --cover", coverage assets end up here.
+/bloom_site/cover/
+
+# The directory Mix downloads your dependencies sources to.
+/bloom_site/deps/
+
+# Where 3rd-party dependencies like ExDoc output generated docs.
+/bloom_site/doc/
+
+# Ignore .fetch files in case you like to edit your project deps locally.
+/bloom_site/.fetch
+
+# If the VM crashes, it generates a dump, let's ignore it too.
+/bloom_site/erl_crash.dump
+
+# Also ignore archive artifacts (built via "mix archive.build").
+/bloom_site/*.ez
+
+# Temporary files, for example, from tests.
+/bloom_site/tmp/
+
+# Ignore package tarball (built via "mix hex.build").
+/bloom_site/bloom_site-*.tar
+
+# Ignore assets that are produced by build tools.
+/bloom_site/priv/static/assets/
+
+# Ignore digested assets cache.
+/bloom_site/priv/static/cache_manifest.json
+
+# In case you use Node.js/npm, you want to ignore these.
+/bloom_site/npm-debug.log
+/bloom_site/assets/node_modules/
+
+
+/bloom_site/.elixir_ls

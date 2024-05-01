@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" class="[scrollbar-gutter:stable]">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Phoenix Framework">
+      <%= assigns[:page_title] || "BloomSite" %>
+    </.live_title>
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+    <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+    </script>
+  </head>
+  <body class="bg-white antialiased bloom-site-web">
+    <%= @inner_content %>
+  </body>
+
+  <script
+    id="uini-w"
+    type="module"
+    src="https://uini.io/widget/uini-w.js"
+    data-api-key="bloom_xQnYWKKf_Fthq5fMzW2IkcS8ru3WB0fwg"
+  >
+  </script>
+</html>
