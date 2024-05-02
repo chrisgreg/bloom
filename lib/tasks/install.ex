@@ -36,6 +36,7 @@ defmodule Mix.Tasks.Bloom.Install do
     env = Mix.env() |> Atom.to_string()
     project_name = Mix.Project.config()[:app] |> Atom.to_string() |> String.downcase()
     source_file = "_build/#{env}/lib/bloom/priv/templates/#{file_name}.ex"
+    js_hook_file = "_build/#{env}/lib/bloom/priv/templates/#{file_name}.js"
 
     if File.exists?(source_file) do
       component_dir = component_dir(project_name)
@@ -48,6 +49,14 @@ defmodule Mix.Tasks.Bloom.Install do
         EEx.eval_file(source_file, module_name: module_name, assigns: %{module_name: module_name})
 
       File.write!(target_path, source_code)
+
+      if File.exists?(js_hook_file) do
+        js_hook_dir = "assets/vendor/hooks"
+        File.mkdir_p(js_hook_dir)
+        js_hook_target_path = "#{js_hook_dir}/#{file_name}.js"
+        File.cp!(js_hook_file, js_hook_target_path)
+      end
+
       Mix.shell().info("#{file_name} component installed successfully ✅ - #{target_path}")
 
       Mix.shell().info(
