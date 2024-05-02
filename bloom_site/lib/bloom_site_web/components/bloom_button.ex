@@ -6,8 +6,8 @@ defmodule BloomSiteWeb.Components.Button do
   Button component
 
     ## Examples
-    <.button>Send!</.button>
-    <.button variant="outlined">Outlined Button</.button>
+    <.bloom_button>Send!</.button>
+    <.bloom_button variant="outlined">Outlined Button</.button>
   """
 
   attr :type, :string, default: nil
