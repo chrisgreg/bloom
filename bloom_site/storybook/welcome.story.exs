@@ -52,7 +52,7 @@ defmodule Storybook.MyPage do
         <p>Can be installed by adding bloom to your list of dependencies in mix.exs:</p>
         <pre><code>def deps do
         [
-          {:bloom, "~> 0.0.5"}
+          {:bloom, "~> 0.0.6"}
         ]
       end</code></pre>
         <p>Relies on Phoenix being installed.</p>
