@@ -50,7 +50,9 @@ defmodule Mix.Tasks.Bloom.Install do
 
       File.write!(target_path, source_code)
 
-      if File.exists?(js_hook_file) do
+      component_includes_js? = File.exists?(js_hook_file)
+
+      if component_includes_js? do
         js_hook_dir = "assets/vendor/hooks"
         File.mkdir_p(js_hook_dir)
         js_hook_target_path = "#{js_hook_dir}/#{file_name}.js"
@@ -62,6 +64,12 @@ defmodule Mix.Tasks.Bloom.Install do
       Mix.shell().info(
         "Don't forget to import the component to your #{project_name |> Macro.underscore()}_web.ex` file."
       )
+
+      if component_includes_js? do
+        Mix.shell().info(
+          "Make sure you import the JS hook in your `app.js` file and add it to the hooks of your Liveview Socket."
+        )
+      end
     else
       Mix.shell().info("Template not found: #{source_file}")
     end
