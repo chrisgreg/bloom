@@ -7,13 +7,10 @@ defmodule Bloom.Components.SoundEffect do
   """
   use Phoenix.LiveComponent
 
-  attr(:disabled, :boolean, default: false)
-
-  @impl true
   def mount(params, _session, socket) do
     # subscribe to Phoenix PubSub events
     Phoenix.PubSub.subscribe(Bloom.PubSub, "sound_effect:play")
-    {:ok, assign(socket, disabled: Map.get(params, :disabled))}
+    {:ok, assign(socket, disabled: Map.get(params, :disabled, false))}
   end
 
   @impl true
@@ -48,13 +45,11 @@ defmodule Bloom.Components.SoundEffect do
     {:noreply, assign(socket, disabled: !socket.assigns.disabled)}
   end
 
-  @impl true
   def handle_info({:play_sound, sound}, %{assigns: %{disabled: false}} = socket) do
     # inform the frontend that a sound needs to be played
     {:noreply, push_event(socket, "play_sound", %{sound: sound})}
   end
 
-  @impl true
   def handle_info({:play_sound, _sound}, socket) do
     {:noreply, socket}
   end
