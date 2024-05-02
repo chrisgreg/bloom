@@ -1,7 +1,6 @@
 {
   "name": "bloom",
   "version": "0.0.1",
-  "type": "module",
   "license": "MIT",
   "devDependencies": {
     "@types/phoenix_live_view": "^0.18.4",
