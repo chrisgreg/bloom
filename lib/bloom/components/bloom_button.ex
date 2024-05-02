@@ -8,7 +8,7 @@ defmodule Bloom.Components.Button do
   attr(:class, :string, default: "", doc: "CSS class property for the button component")
   slot(:inner_block, required: true, doc: "Content block of the button component")
 
-  def hero(assigns) do
+  def button(assigns) do
     ~H"""
     <button>
       <%= render_slot(@inner_block) %>
