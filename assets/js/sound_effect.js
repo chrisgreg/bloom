@@ -10,6 +10,8 @@ export const soundEffectHook = {
 
     // Initialize Audio Context
     this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    // Cache for storing fetched sounds
+    this.audioCache = {};
 
     this.handleEvent("play_sound", ({ sound }) => {
       console.info("playing sound", sound);
@@ -19,12 +21,18 @@ export const soundEffectHook = {
 
   async playSound(url) {
     try {
-      // Fetch sound file
-      const response = await fetch(url);
-      const arrayBuffer = await response.arrayBuffer();
-      // Decode audio data to be used by the AudioContext
-      const audioBuffer = await this.audioCtx.decodeAudioData(arrayBuffer);
-      this.playAudioBuffer(audioBuffer);
+      // Use cached sound if available, otherwise fetch, decode, and cache it
+      if (!this.audioCache[url]) {
+        // Fetch sound file
+        const response = await fetch(url);
+        const arrayBuffer = await response.arrayBuffer();
+        // Decode audio data to be used by the AudioContext
+        const audioBuffer = await this.audioCtx.decodeAudioData(arrayBuffer);
+        // Store the decoded buffer in cache
+        this.audioCache[url] = audioBuffer;
+      }
+      // Play the sound from the cache
+      this.playAudioBuffer(this.audioCache[url]);
     } catch (err) {
       console.error("Error playing sound:", err);
     }
