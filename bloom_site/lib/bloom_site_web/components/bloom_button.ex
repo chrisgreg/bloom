@@ -4,8 +4,8 @@ defmodule BloomSiteWeb.Components.BloomButton do
 
   @moduledoc """
   An extension of the *core_components button*.
-  The `<.bloom_button>` has the possibility to handle variants
-  in the form of `contained` or `outlined` buttons.
+  The `<.bloom_button>` has the ability to handle a variant attribute.
+  This makes it possible to have a `contained` or `outlined` look.
 
   ## Examples
   <.bloom_button>Send!</.button>
