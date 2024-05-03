@@ -20,6 +20,11 @@ defmodule Mix.Tasks.Bloom.InstallTest do
                  "glow_button component installed successfully ✅ - lib/bloom_web/components/glow_button.ex"
       end)
 
+      expect(ShellMock, :info, fn msg ->
+        assert msg ==
+                 "Don't forget to import the component to your bloom_web.ex` file."
+      end)
+
       Mix.Tasks.Bloom.Install.run(["glow_button"])
     end
 
@@ -33,7 +38,8 @@ defmodule Mix.Tasks.Bloom.InstallTest do
       end)
 
       expect(ShellMock, :info, fn msg ->
-        assert msg == "Available components: glow_button"
+        assert msg ==
+                 "Available components: glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee | badge"
       end)
 
       Mix.Tasks.Bloom.Install.run(["nonexistent_component"])
@@ -45,7 +51,8 @@ defmodule Mix.Tasks.Bloom.InstallTest do
       end)
 
       expect(ShellMock, :info, fn msg ->
-        assert msg == "Available components: glow_button"
+        assert msg ==
+                 "Available components: glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee | badge"
       end)
 
       Mix.Tasks.Bloom.Install.run([])
@@ -62,6 +69,11 @@ defmodule Mix.Tasks.Bloom.InstallTest do
       expect(ShellMock, :info, fn msg ->
         assert msg ==
                  "glow_button component installed successfully ✅ - lib/bloom_web/components/glow_button.ex"
+      end)
+
+      expect(ShellMock, :info, fn msg ->
+        assert msg ==
+                 "Don't forget to import the component to your bloom_web.ex` file."
       end)
 
       Mix.Tasks.Bloom.Install.install_component("glow_button")
