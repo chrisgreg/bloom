@@ -5,6 +5,8 @@ defmodule BloomSite.Storybook.BloomComponents.SoundEffect do
 
   def attributes, do: [%Attr{id: :disabled, type: :boolean, default: false}]
 
+  def slots, do: [%Slot{id: :inner_block}]
+
   def variations do
     [
       %Variation{
@@ -19,6 +21,12 @@ defmodule BloomSite.Storybook.BloomComponents.SoundEffect do
           disabled: true
         },
       },
+      %Variation{
+        id: :custom_icon,
+        slots: [
+          ~s|<h1>Custom Icon</h1>|
+        ]
+      }
     ]
   end
 end
