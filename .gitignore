@@ -66,5 +66,6 @@ bloom-*.tar
 /bloom_site/npm-debug.log
 /bloom_site/assets/node_modules/
 
-
 /bloom_site/.elixir_ls
+
+node_modules/
