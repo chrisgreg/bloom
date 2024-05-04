@@ -9,7 +9,9 @@
       </p>
     </div>
     <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
-      <a href="https://github.com/chrisgreg/bloom" class="hover:text-zinc-700 w-8">
+      <.link navigate="/showcase" class="hover:text-zinc-700">Showcase</.link>
+      <.link navigate="/storybook" class="hover:text-zinc-700">Docs</.link>
+      <.link href="https://github.com/chrisgreg/bloom" class="hover:text-zinc-700 w-8">
         <svg class="w-8 h-8" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
           <path
             fill-rule="evenodd"
@@ -17,12 +19,12 @@
             clip-rule="evenodd"
           />
         </svg>
-      </a>
+      </.link>
     </div>
   </div>
 </header>
 <main class="px-4 py-20 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-4xl">
+  <div class="mx-auto max-w-7xl">
     <.flash_group flash={@flash} />
     <%= @inner_content %>
   </div>
