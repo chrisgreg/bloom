@@ -4,7 +4,6 @@ defmodule BloomSite.Storybook.BloomComponents.Marquee do
   def function, do: &BloomSiteWeb.Components.Marquee.marquee/1
   def imports, do: [{BloomSiteWeb.Components.Card, [card: 1]}]
 
-
   def variations do
     [
       %Variation{

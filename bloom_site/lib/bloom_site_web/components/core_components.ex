@@ -1,5 +1,5 @@
 defmodule BloomSiteWeb.CoreComponents do
-  @moduledoc """
+  @doc """
   Provides core UI components.
 
   At the first glance, this module may seem daunting, but its goal is

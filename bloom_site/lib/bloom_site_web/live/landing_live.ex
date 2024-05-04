@@ -7,6 +7,7 @@ defmodule BloomSiteWeb.LandingLive do
   import BloomSiteWeb.Components.BentoGrid
   import BloomSiteWeb.Components.Marquee
   import BloomSiteWeb.Components.Card
+  import BloomSiteWeb.Components.Avatar
 
   def mount(_params, _session, socket) do
     {:ok, socket}
