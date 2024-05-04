@@ -1,7 +1,7 @@
 defmodule BloomSiteWeb.Components.Marquee do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   Marquee component
 
   Sliding carousel of images that can go backwards and forwards.

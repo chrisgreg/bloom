@@ -1,7 +1,7 @@
 defmodule BloomSiteWeb.Components.GradientText do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   Gradient text component
   """
 

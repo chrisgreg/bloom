@@ -1,7 +1,7 @@
 defmodule BloomSiteWeb.Components.Card do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   Card component
   """
 
