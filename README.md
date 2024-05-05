@@ -28,7 +28,7 @@ Can be installed by adding `bloom` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:bloom, "~> 0.0.2"}
+    {:bloom, "~> 0.0.8"}
   ]
 end
 ```

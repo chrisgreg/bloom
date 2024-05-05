@@ -4,7 +4,7 @@ defmodule Bloom.MixProject do
   def project do
     [
       app: :bloom,
-      version: "0.0.7",
+      version: "0.0.8",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
