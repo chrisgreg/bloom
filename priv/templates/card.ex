@@ -24,10 +24,10 @@ defmodule <%= @module_name %>Web.Components.Card do
       <div class="flex flex-row items-center gap-2">
         <img :if={assigns[:image]} class="rounded-full" width="32" height="32" alt="" src={@image} />
         <div class="flex flex-col">
-          <figcaption class="text-sm font-medium dark:text-white">
+          <figcaption class="text-sm font-medium dark:text-zinc-700">
             <%%= @title %>
           </figcaption>
-          <p class="text-xs font-medium dark:text-white"><%%= @subheading %></p>
+          <p class="text-xs font-medium dark:text-zinc-700"><%%= @subheading %></p>
         </div>
       </div>
       <blockquote class="mt-2 text-sm"><%%= @body %></blockquote>

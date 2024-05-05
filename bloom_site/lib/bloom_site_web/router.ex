@@ -23,6 +23,7 @@ defmodule BloomSiteWeb.Router do
     pipe_through :browser
 
     live "/", LandingLive, :home
+    live "/showcase", ShowcaseLive
     live_storybook("/storybook", backend_module: Elixir.BloomSiteWeb.Storybook)
   end
 
