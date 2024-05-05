@@ -60,6 +60,7 @@ defmodule Bloom.Components.SoundEffect do
   end
 
   attr(:disabled, :boolean, default: false)
+  attr(:class, :string, default: "", doc: "CSS class for root button")
   slot(:inner_block, default: [])
 
   @impl true
@@ -71,7 +72,7 @@ defmodule Bloom.Components.SoundEffect do
       phx-click="toggle-sound"
       phx-target={@myself}
       aria-label={"Turn sound effects #{if(@disabled, do: "on", else: "off")}"}
-      class=""
+      class={@class}
     >
       <.speaker_icon :if={!Map.get(assigns, :inner_block) || @inner_block == []} disabled={@disabled} />
       <%= render_slot(@inner_block, %{disabled: @disabled}) %>
@@ -80,6 +81,7 @@ defmodule Bloom.Components.SoundEffect do
   end
 
   attr(:disabled, :boolean, default: false)
+  attr(:class, :string, default: "", doc: "CSS class for root button")
   slot(:inner_block)
 
   @doc """
@@ -89,7 +91,13 @@ defmodule Bloom.Components.SoundEffect do
     assigns = assign(assigns, id: @id)
 
     ~H"""
-    <.live_component id={@id} module={__MODULE__} disabled={@disabled} inner_block={@inner_block} />
+    <.live_component
+      id={@id}
+      module={__MODULE__}
+      disabled={@disabled}
+      inner_block={@inner_block}
+      class={@class}
+    />
     """
   end
 
@@ -119,12 +127,16 @@ defmodule Bloom.Components.SoundEffect do
 
   defp speaker_icon(assigns) do
     ~H"""
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-4 h-4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="h-4 w-4 stroke-current">
       <rect width="256" height="256" fill="none" />
       <path d="M163.52,24.81a8,8,0,0,0-8.43.88L85.25,80H40A16,16,0,0,0,24,96v64a16,16,0,0,0,16,16H85.25l69.84,54.31A7.94,7.94,0,0,0,160,232a8,8,0,0,0,8-8V32A8,8,0,0,0,163.52,24.81Z" />
       <path
         :if={@disabled}
         d="M235.31,128l18.35-18.34a8,8,0,0,0-11.32-11.32L224,116.69,205.66,98.34a8,8,0,0,0-11.32,11.32L212.69,128l-18.35,18.34a8,8,0,0,0,11.32,11.32L224,139.31l18.34,18.35a8,8,0,0,0,11.32-11.32Z"
+        class={[
+          "transition-opacity duration-300 ease-in-out",
+          if(@disabled, do: "opacity-0", else: "opacity-100")
+        ]}
       />
     </svg>
     """
