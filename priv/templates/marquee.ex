@@ -42,13 +42,6 @@ defmodule <%= @module_name %>Web.Components.Marquee do
   slot(:inner_block, required: true)
 
   def marquee(assigns) do
-    assigns =
-      assigns
-      |> assign(:repeat, assigns[:repeat] || 4)
-      |> assign(:vertical, assigns[:vertical] || false)
-      |> assign(:pause_on_hover, assigns[:pause_on_hover] || false)
-      |> assign(:reverse, assigns[:reverse] || false)
-
     ~H"""
     <div
       :if={@repeat > 0}
