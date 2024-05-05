@@ -15,15 +15,6 @@ defmodule BloomSite.Storybook.BloomComponents.Badge do
           variant: "secondary"
         },
         slots: ["Badge"]
-      },
-      %Variation{
-        id: :glow,
-        attributes: %{
-          variant: "primary",
-          from_color: "rose-700",
-          to_color: "purple-800"
-        },
-        slots: ["Badge"]
       }
     ]
   end
