@@ -1,419 +1,462 @@
-<.hero class="max-w-4xl text-pretty">
-  <img src={~p"/images/bloom.png"} class="w-[160px] mx-auto" />
-  <.gradient_text from_color="rose-400" to_color="purple-500">Bloom</.gradient_text>
-  <:subtitle>
-    The opinionated, open-source extension to Phoenix Core Components.<br />
-    Install a copy of each component using the mix command in seconds.<br />
-    Yours to edit and customise.
-  </:subtitle>
-  <:actions>
-    <div class="flex flex-row gap-4">
-      <.link href="/storybook">
-        <.glow_button>
-          View Components & Storybook
-        </.glow_button>
-      </.link>
-      <.link href="https://github.com/chrisgreg/bloom">
-        <.glow_button from_color="white" to_color="white" class="hover:bg-zinc-700">
-          Github
-        </.glow_button>
-      </.link>
-    </div>
-  </:actions>
-</.hero>
+<div class="max-w-4xl mx-auto">
+  <.hero class="max-w-4xl text-pretty">
+    <img src={~p"/images/bloom.png"} class="w-[160px] mx-auto" />
+    <.gradient_text from_color="rose-400" to_color="purple-500">Bloom</.gradient_text>
+    <:subtitle>
+      The opinionated, open-source extension to Phoenix Core Components.<br />
+      Install a copy of each component using the mix command in seconds.<br />
+      Yours to edit and customise.
+    </:subtitle>
+    <:actions>
+      <div class="flex flex-row gap-4">
+        <.link href="/storybook">
+          <.glow_button>
+            View Components & Storybook
+          </.glow_button>
+        </.link>
+        <.link href="https://github.com/chrisgreg/bloom">
+          <.glow_button from_color="white" to_color="white" class="hover:bg-zinc-700">
+            Github
+          </.glow_button>
+        </.link>
+      </div>
+    </:actions>
+  </.hero>
 
-<section class="flex flex-row justify-center items-center mt-4 mb-24 gap-6">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-10">
-    <linearGradient
-      id="elixir-original-a"
-      gradientUnits="userSpaceOnUse"
-      x1="835.592"
-      y1="-36.546"
-      x2="821.211"
-      y2="553.414"
-      gradientTransform="matrix(.1297 0 0 .2 -46.03 17.198)"
-    >
-      <stop offset="0" stop-color="#d9d8dc" /><stop
-        offset="1"
-        stop-color="#fff"
-        stop-opacity=".385"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-a)"
-      d="M64.4.5C36.7 13.9 1.9 83.4 30.9 113.9c26.8 33.5 85.4 1.3 68.4-40.5-21.5-36-35-37.9-34.9-72.9z"
-    />
-    <linearGradient
-      id="elixir-original-b"
-      gradientUnits="userSpaceOnUse"
-      x1="942.357"
-      y1="-40.593"
-      x2="824.692"
-      y2="472.243"
-      gradientTransform="matrix(.1142 0 0 .2271 -47.053 17.229)"
-    >
-      <stop offset="0" stop-color="#8d67af" stop-opacity=".672" /><stop
-        offset="1"
-        stop-color="#9f8daf"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-b)"
-      d="M64.4.2C36.8 13.6 1.9 82.9 31 113.5c10.7 12.4 28 16.5 37.7 9.1 26.4-18.8 7.4-53.1 10.4-78.5C68.1 33.9 64.2 11.3 64.4.2z"
-    />
-    <linearGradient
-      id="elixir-original-c"
-      gradientUnits="userSpaceOnUse"
-      x1="924.646"
-      y1="120.513"
-      x2="924.646"
-      y2="505.851"
-      gradientTransform="matrix(.1227 0 0 .2115 -46.493 17.206)"
-    >
-      <stop offset="0" stop-color="#26053d" stop-opacity=".762" /><stop
-        offset="1"
-        stop-color="#b7b4b4"
-        stop-opacity=".278"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-c)"
-      d="M56.7 4.3c-22.3 15.9-28.2 75-24.1 94.2 8.2 48.1 75.2 28.3 69.6-16.5-6-29.2-48.8-39.2-45.5-77.7z"
-    />
-    <linearGradient
-      id="elixir-original-d"
-      gradientUnits="userSpaceOnUse"
-      x1="428.034"
-      y1="198.448"
-      x2="607.325"
-      y2="559.255"
-      gradientTransform="matrix(.1848 0 0 .1404 -42.394 17.138)"
-    >
-      <stop offset="0" stop-color="#91739f" stop-opacity=".46" /><stop
-        offset="1"
-        stop-color="#32054f"
-        stop-opacity=".54"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-d)"
-      d="M78.8 49.8c10.4 13.4 12.7 22.6 6.8 27.9-27.7 19.4-61.3 7.4-54-37.3C22.1 63 4.5 96.8 43.3 101.6c20.8 3.6 54 2 58.9-16.1-.2-15.9-10.8-22.9-23.4-35.7z"
-    />
-    <linearGradient
-      id="elixir-original-e"
-      gradientUnits="userSpaceOnUse"
-      x1="907.895"
-      y1="540.636"
-      x2="590.242"
-      y2="201.281"
-      gradientTransform="matrix(.1418 0 0 .1829 -45.23 17.18)"
-    >
-      <stop offset="0" stop-color="#463d49" stop-opacity=".331" /><stop
-        offset="1"
-        stop-color="#340a50"
-        stop-opacity=".821"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-e)"
-      d="M38.1 36.4c-2.9 21.2 35.1 77.9 58.3 71-17.7 35.6-56.9-21.2-64-41.7 1.5-11 2.2-16.4 5.7-29.3z"
-    />
-    <linearGradient
-      id="elixir-original-f"
-      gradientUnits="userSpaceOnUse"
-      x1="1102.297"
-      y1="100.542"
-      x2="1008.071"
-      y2="431.648"
-      gradientTransform="matrix(.106 0 0 .2448 -47.595 17.242)"
-    >
-      <stop offset="0" stop-color="#715383" stop-opacity=".145" /><stop
-        offset="1"
-        stop-color="#f4f4f4"
-        stop-opacity=".234"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-f)"
-      d="M60.4 49.7c.8 7.9 3.9 20.5 0 28.8S38.7 102 43.6 115.3c11.4 24.8 37.1-4.4 36.9-19 1.1-11.8-6.6-38.7-1.8-52.5L76.5 41l-13.6-4c-2.2 3.2-3 7.5-2.5 12.7z"
-    />
-    <linearGradient
-      id="elixir-original-g"
-      gradientUnits="userSpaceOnUse"
-      x1="1354.664"
-      y1="140.06"
-      x2="1059.233"
-      y2="84.466"
-      gradientTransform="matrix(.09173 0 0 .2828 -48.536 17.28)"
-    >
-      <stop offset="0" stop-color="#a5a1a8" stop-opacity=".356" /><stop
-        offset="1"
-        stop-color="#370c50"
-        stop-opacity=".582"
-      />
-    </linearGradient>
-    <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="url(#elixir-original-g)"
-      d="M65.3 10.8C36 27.4 48 53.4 49.3 81.6l19.1-55.4c-1.4-5.7-2.3-9.5-3.1-15.4z"
-    /><path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="#330A4C"
-      fill-opacity=".316"
-      d="M68.3 26.1c-14.8 11.7-14.1 31.3-18.6 54 8.1-21.3 4.1-38.2 18.6-54z"
-    /><path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="#FFF"
-      d="M45.8 119.7c8 1.1 12.1 2.2 12.5 3 .3 4.2-11.1 1.2-12.5-3z"
-    /><path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
-      fill="#EDEDED"
-      fill-opacity=".603"
-      d="M49.8 10.8c-6.9 7.7-14.4 21.8-18.2 29.7-1 6.5-.5 15.7.6 23.5.9-18.2 7.5-39.2 17.6-53.2z"
-    />
-  </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-10">
-    <path
-      fill="#fd4f00"
-      d="m48.067 81.275-1.006-.183c-7.145-1.329-11.66-5.65-13.797-12.447-1.337-4.237 1.087-7.355 5.53-7.56 3.637-.17 6.129 1.922 8.33 4.355 2.839 3.135 5.44 6.486 8.228 9.67 4.014 4.583 8.744 7.534 15.215 6.623 5.801-.816 10.86-3.144 15.258-6.977.661-.576 1.387-1.079 2.085-1.615l-.44-.518c-3.694 1.15-7.46 1.533-11.31 1.34-5.823-.292-11.373-1.51-16.338-4.706-4.531-2.918-7.873-6.828-9.46-12.05-1.283-4.22 1.34-7.171 5.715-6.561 1.727.242 3.181 1.02 4.489 2.122 1.062.9 2.083 1.85 3.167 2.722 5.104 4.102 12.235 4.33 18.71-.124-10.648-.048-17.893-5.907-24.256-13.33-2.49-2.905-4.921-5.861-7.464-8.722-4.919-5.533-10.375-10.407-17.844-12.072-9.548-2.122-18.762-.732-27.606 3.316-1.763.807-3.456 1.748-5.273 3.26.9 0 1.39.01 1.88 0 4.46-.117 7.802 1.864 10.212 5.512 1.754 2.655 2.58 5.657 3.21 8.745.935 4.584.45 9.255.991 13.861 1.387 11.837 7.437 20.097 18.701 24.327 4.132 1.552 8.368 2.068 13.072 1.01zm-28.471-54c-1.779.448-3.201-.27-4.666-1.753 2.51-.625 4.724-.868 7.103-.963-.195 1.546-1.107 2.38-2.435 2.716zm58.332 69.126c-.155-1.141-1.13-1.643-1.896-2.238-3.384-2.636-7.345-3.57-11.543-3.646-2.506-.047-4.986-.233-7.347-1.112-1.084-.4-2.298-.92-2.268-2.318.027-1.422 1.263-1.823 2.388-2.159.92-.272 1.87-.45 2.917-.695-2.661-1.706-5.261-1.941-8.726-.547-5.456 2.19-10.833 1.932-16.27-.03-3.07-1.11-5.795-2.85-8.63-4.39l-.078.055a5.395 5.395 0 0 0 .072-.054c-.07-.213-.195-.219-.359-.098l.222.195c2.351 3.855 5.53 6.957 9.121 9.608 6.914 5.103 14.465 8.148 23.302 6.798a121.601 121.601 0 0 1 8.608-1.008c3.61-.292 7.047.726 10.487 1.639zm-16.66-55.31c-.192-.138-.376-.484-.767-.126 3.181 4.302 7.264 7.47 12.182 9.466 7.936 3.221 15.991 3.773 24.23.93 6.397-2.206 10.995-.051 13.384 6.16.346-7.209-3.896-12.462-10.65-13.49-3.8-.58-7.31.68-10.867 1.713-9.905 2.872-19.112 1.455-27.513-4.653zm49.367 28.116c1.29.107 2.582.224 3.872.337-2.916-2.56-6.47-2.765-10.067-2.56-5.473.31-9.417 3.47-13.014 7.24-3.17 3.326-6.034 7.055-10.76 8.392.08.142.1.214.122.214.636.009 1.272.038 1.907.009 6.868-.31 13.338-1.759 18.483-6.744 1.622-1.568 3.07-3.311 4.636-4.94 1.306-1.36 2.887-2.113 4.821-1.95zm-15.954-8.512c-5.125.449-9.576 2.568-13.757 5.364-3.22 2.15-6.66 3.168-10.529 2.497-.68-.12-1.366-.208-2.049-.31l-.023.284c.246.128.483.275.738.378.645.255 1.28.562 1.95.72 7.442 1.77 14.568.864 20.991-3.286 4.049-2.616 8.24-3.112 12.783-2.436.46.07.917.151 1.378.196.426.04.872.463 1.449.005-3.971-2.869-8.25-3.82-12.931-3.412zM76.366 43.298c2.688.093 5.364-.26 8.177-1.93-.825.072-1.172.072-1.508.138-3.875.772-7.351-.073-10.45-2.521-1.135-.898-2.29-1.775-3.442-2.656-4.563-3.488-9.797-4.656-15.52-4.556.091.28.1.474.198.574 6.229 6.297 13.435 10.637 22.545 10.95zm45.07 32.319c-3.853-3.823-9.026-4.314-13.812-.979 3.168.141 5.546 1.152 7.474 3.15a23.695 23.695 0 0 0 2.155 2.015c2.917 2.352 7.858 2.465 10.747.282-3.392-1.323-3.392-1.323-6.563-4.468zm-38.384 29.272c-3.386-6.306-9.079-7.728-15.657-7.305a17.62 17.62 0 0 1 5.426 2.534c1.532 1.068 2.82 2.388 4.09 3.745 2.514 2.685 6.44 4.33 9.043 3.774-1.195-.751-2.257-1.547-2.902-2.748zm31.516-35.215c0-.042.001-.081.004-.124l-.01.011.01-.01-.065-.008.038.032.022.097zM78.114 96.55a13.871 13.871 0 0 0-.132-.076.232.232 0 0 0 .027.079c.01.015.07 0 .106-.003zm-.132-.076-.015-.061-.015.018.015-.018-.04-.01.01.046.043.025z"
-    />
-  </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33" class="w-10">
-    <g clip-path="url(#prefix__clip0)">
-      <path
-        fill="#38bdf8"
-        fill-rule="evenodd"
-        d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-        clip-rule="evenodd"
-      />
-    </g>
-    <defs>
-      <clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z" /></clipPath>
-    </defs>
-  </svg>
-</section>
-
-<h2 class="font-semibold text-3xl mt-32 mb-8">
-  <.gradient_text>
-    Use in seconds
-  </.gradient_text>
-  <p class="text-xl font-medium text-gray-500">
-    Install the dependency, use the mix task, customise, use.
-  </p>
-</h2>
-
-<div class="mx-auto md:flex-row flex-col flex justify-center gap-8 my-12">
-  <.code_snippet>
-    defp deps do
-    [
-    {:bloom, "~> 0.0.6"},
-    ]
-    end
-  </.code_snippet>
-  <.code_snippet>
-    mix bloom.install code_snippet
-  </.code_snippet>
-</div>
-
-<h2 class="font-semibold text-3xl mt-32 mb-8">
-  <.gradient_text>
-    Look, a bento grid Phoenix Component!
-  </.gradient_text>
-  <p class="text-xl font-medium text-gray-500">
-    For showing off features, or just for fun.
-  </p>
-</h2>
-
-<.bento_grid>
-  <.bento_card
-    name="Calendar Item"
-    icon="hero-calendar"
-    description="All the components in Bloom."
-    row_start={1}
-    row_end={3}
-    col_start={1}
-    col_end={2}
-  >
-    <.button class="border-white text-white font-medium text-xs items-center gap-2 flex flex-row">
-      Here's a button <.icon name="hero-arrow-right" class="h-4 w-4" />
-    </.button>
-  </.bento_card>
-  <.bento_card
-    name="Bell Bento"
-    icon="hero-bell"
-    description="All the components in Bloom."
-    row_start={1}
-    row_end={1}
-    col_start={2}
-    col_end={4}
-  >
-    <.button class="border-white text-white font-semibold">
-      Here's a button
-    </.button>
-  </.bento_card>
-  <.bento_card
-    name="Some sort of hat"
-    icon="hero-academic-cap"
-    description="All the components in Bloom."
-    row_start={3}
-    row_end={4}
-    col_start={1}
-    col_end={2}
-  >
-    <.button class="border-white text-white font-semibold">
-      Here's a button
-    </.button>
-  </.bento_card>
-  <.bento_card
-    name="Cloud Infrastructure"
-    icon="hero-cloud"
-    description="All the components in Bloom."
-    row_start={2}
-    row_end={4}
-    col_start={2}
-    col_end={3}
-  >
-    <.button class="border-white text-white font-semibold">
-      Here's a button
-    </.button>
-  </.bento_card>
-  <.bento_card
-    name="Tournament"
-    icon="hero-trophy"
-    description="All the components in Bloom."
-    row_start={2}
-    row_end={4}
-    col_start={3}
-    col_end={4}
-  >
-    <.button class="border-white text-white font-semibold">
-      Here's a button
-    </.button>
-  </.bento_card>
-</.bento_grid>
-
-<h2 class="font-semibold text-3xl mt-32 ">
-  <.gradient_text>
-    Marquee & Card Components
-  </.gradient_text>
-  <p class="text-xl font-medium text-gray-500">
-    Think social proof, showing company logos, and more.
-  </p>
-</h2>
-<div class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background py-20">
-  <.marquee repeat={5} vertical={false} pause_on_hover={true} reverse={true}>
-    <.card
-      image="https://picsum.photos/64"
-      title="Jack"
-      subheading="@faketwitter"
-      body="This is so cool."
-    />
-    <.card
-      image="https://picsum.photos/64"
-      title="Chris"
-      subheading="@codestirring"
-      body="Whoa, it's like shadcn for Elixir and Phoenix!"
-    />
-    <.card
-      image="https://picsum.photos/64"
-      title="Rhiannon"
-      subheading="@rhiality"
-      body="Just run mix bloom.install card"
-    />
-  </.marquee>
-  <.marquee repeat={5} vertical={false} pause_on_hover={true} reverse={false}>
-    <.card
-      image="https://picsum.photos/64"
-      title="Penny"
-      subheading="@widmore4eva"
-      body="I love that I can customise each component 🤩"
-    />
-    <.card
-      image="https://picsum.photos/64"
-      title="Desmond"
-      subheading="@hatchlover"
-      body="This will save me so much time!"
-    />
-    <.card
-      image="https://picsum.photos/64"
-      title="Ben Linus"
-      subheading="@jacob_fan_23"
-      body="Open source so anyone can use it for free!"
-    />
-  </.marquee>
-  <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background">
-  </div>
-  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background">
-  </div>
-</div>
-
-<section class="mx-auto text-center flex justify-center flex-col gap-8 mt-24">
-  <h2>
-    <.gradient_text from_color="rose-400" to_color="purple-500" class="font-semibold text-3xl">
-      Missing a component you want? This is Open Source!
-    </.gradient_text>
-  </h2>
-  <.link href="https://github.com/chrisgreg/bloom/issues">
-    <.button class="border-white w-fit mx-auto px-6 py-4 flex flex-row gap-2 items-center text-white text-lg">
-      Request or add components here <.icon name="hero-arrow-right" class="h-6 w-6" />
-    </.button>
-  </.link>
-</section>
-
-<section class="bg-white">
-  <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
-    <div class="flex justify-center mt-8 space-x-6">
-      <a href="https://twitter.com/@codestirring" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">Twitter</span>
-        <svg
-          class="w-6 h-6 text-rose-300 hover:text-rose-400 transition-all"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-        </svg>
-      </a>
-      <a href="https://github.com/chrisgreg/bloom" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">GitHub</span>
-        <svg
-          class="w-6 h-6 text-rose-300 hover:text-rose-400 transition-all"
-          aria-hidden="true"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-            clip-rule="evenodd"
-          />
-        </svg>
-      </a>
-    </div>
-    <p class="mt-32 font-semibold text-sm leading-6 text-center text-gray-400">
-      &copy; 2024 - made by
-      <a
-        href="https://twitter.com/@codestirring"
-        class="text-orange-400 hover:text-rose-500 transition-colors"
+  <section class="flex flex-row justify-center items-center mt-4 mb-24 gap-6">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-10">
+      <linearGradient
+        id="elixir-original-a"
+        gradientUnits="userSpaceOnUse"
+        x1="835.592"
+        y1="-36.546"
+        x2="821.211"
+        y2="553.414"
+        gradientTransform="matrix(.1297 0 0 .2 -46.03 17.198)"
       >
-        Chris Gregori
-      </a>
+        <stop offset="0" stop-color="#d9d8dc" /><stop
+          offset="1"
+          stop-color="#fff"
+          stop-opacity=".385"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-a)"
+        d="M64.4.5C36.7 13.9 1.9 83.4 30.9 113.9c26.8 33.5 85.4 1.3 68.4-40.5-21.5-36-35-37.9-34.9-72.9z"
+      />
+      <linearGradient
+        id="elixir-original-b"
+        gradientUnits="userSpaceOnUse"
+        x1="942.357"
+        y1="-40.593"
+        x2="824.692"
+        y2="472.243"
+        gradientTransform="matrix(.1142 0 0 .2271 -47.053 17.229)"
+      >
+        <stop offset="0" stop-color="#8d67af" stop-opacity=".672" /><stop
+          offset="1"
+          stop-color="#9f8daf"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-b)"
+        d="M64.4.2C36.8 13.6 1.9 82.9 31 113.5c10.7 12.4 28 16.5 37.7 9.1 26.4-18.8 7.4-53.1 10.4-78.5C68.1 33.9 64.2 11.3 64.4.2z"
+      />
+      <linearGradient
+        id="elixir-original-c"
+        gradientUnits="userSpaceOnUse"
+        x1="924.646"
+        y1="120.513"
+        x2="924.646"
+        y2="505.851"
+        gradientTransform="matrix(.1227 0 0 .2115 -46.493 17.206)"
+      >
+        <stop offset="0" stop-color="#26053d" stop-opacity=".762" /><stop
+          offset="1"
+          stop-color="#b7b4b4"
+          stop-opacity=".278"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-c)"
+        d="M56.7 4.3c-22.3 15.9-28.2 75-24.1 94.2 8.2 48.1 75.2 28.3 69.6-16.5-6-29.2-48.8-39.2-45.5-77.7z"
+      />
+      <linearGradient
+        id="elixir-original-d"
+        gradientUnits="userSpaceOnUse"
+        x1="428.034"
+        y1="198.448"
+        x2="607.325"
+        y2="559.255"
+        gradientTransform="matrix(.1848 0 0 .1404 -42.394 17.138)"
+      >
+        <stop offset="0" stop-color="#91739f" stop-opacity=".46" /><stop
+          offset="1"
+          stop-color="#32054f"
+          stop-opacity=".54"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-d)"
+        d="M78.8 49.8c10.4 13.4 12.7 22.6 6.8 27.9-27.7 19.4-61.3 7.4-54-37.3C22.1 63 4.5 96.8 43.3 101.6c20.8 3.6 54 2 58.9-16.1-.2-15.9-10.8-22.9-23.4-35.7z"
+      />
+      <linearGradient
+        id="elixir-original-e"
+        gradientUnits="userSpaceOnUse"
+        x1="907.895"
+        y1="540.636"
+        x2="590.242"
+        y2="201.281"
+        gradientTransform="matrix(.1418 0 0 .1829 -45.23 17.18)"
+      >
+        <stop offset="0" stop-color="#463d49" stop-opacity=".331" /><stop
+          offset="1"
+          stop-color="#340a50"
+          stop-opacity=".821"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-e)"
+        d="M38.1 36.4c-2.9 21.2 35.1 77.9 58.3 71-17.7 35.6-56.9-21.2-64-41.7 1.5-11 2.2-16.4 5.7-29.3z"
+      />
+      <linearGradient
+        id="elixir-original-f"
+        gradientUnits="userSpaceOnUse"
+        x1="1102.297"
+        y1="100.542"
+        x2="1008.071"
+        y2="431.648"
+        gradientTransform="matrix(.106 0 0 .2448 -47.595 17.242)"
+      >
+        <stop offset="0" stop-color="#715383" stop-opacity=".145" /><stop
+          offset="1"
+          stop-color="#f4f4f4"
+          stop-opacity=".234"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-f)"
+        d="M60.4 49.7c.8 7.9 3.9 20.5 0 28.8S38.7 102 43.6 115.3c11.4 24.8 37.1-4.4 36.9-19 1.1-11.8-6.6-38.7-1.8-52.5L76.5 41l-13.6-4c-2.2 3.2-3 7.5-2.5 12.7z"
+      />
+      <linearGradient
+        id="elixir-original-g"
+        gradientUnits="userSpaceOnUse"
+        x1="1354.664"
+        y1="140.06"
+        x2="1059.233"
+        y2="84.466"
+        gradientTransform="matrix(.09173 0 0 .2828 -48.536 17.28)"
+      >
+        <stop offset="0" stop-color="#a5a1a8" stop-opacity=".356" /><stop
+          offset="1"
+          stop-color="#370c50"
+          stop-opacity=".582"
+        />
+      </linearGradient>
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="url(#elixir-original-g)"
+        d="M65.3 10.8C36 27.4 48 53.4 49.3 81.6l19.1-55.4c-1.4-5.7-2.3-9.5-3.1-15.4z"
+      /><path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="#330A4C"
+        fill-opacity=".316"
+        d="M68.3 26.1c-14.8 11.7-14.1 31.3-18.6 54 8.1-21.3 4.1-38.2 18.6-54z"
+      /><path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="#FFF"
+        d="M45.8 119.7c8 1.1 12.1 2.2 12.5 3 .3 4.2-11.1 1.2-12.5-3z"
+      /><path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        fill="#EDEDED"
+        fill-opacity=".603"
+        d="M49.8 10.8c-6.9 7.7-14.4 21.8-18.2 29.7-1 6.5-.5 15.7.6 23.5.9-18.2 7.5-39.2 17.6-53.2z"
+      />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-10">
+      <path
+        fill="#fd4f00"
+        d="m48.067 81.275-1.006-.183c-7.145-1.329-11.66-5.65-13.797-12.447-1.337-4.237 1.087-7.355 5.53-7.56 3.637-.17 6.129 1.922 8.33 4.355 2.839 3.135 5.44 6.486 8.228 9.67 4.014 4.583 8.744 7.534 15.215 6.623 5.801-.816 10.86-3.144 15.258-6.977.661-.576 1.387-1.079 2.085-1.615l-.44-.518c-3.694 1.15-7.46 1.533-11.31 1.34-5.823-.292-11.373-1.51-16.338-4.706-4.531-2.918-7.873-6.828-9.46-12.05-1.283-4.22 1.34-7.171 5.715-6.561 1.727.242 3.181 1.02 4.489 2.122 1.062.9 2.083 1.85 3.167 2.722 5.104 4.102 12.235 4.33 18.71-.124-10.648-.048-17.893-5.907-24.256-13.33-2.49-2.905-4.921-5.861-7.464-8.722-4.919-5.533-10.375-10.407-17.844-12.072-9.548-2.122-18.762-.732-27.606 3.316-1.763.807-3.456 1.748-5.273 3.26.9 0 1.39.01 1.88 0 4.46-.117 7.802 1.864 10.212 5.512 1.754 2.655 2.58 5.657 3.21 8.745.935 4.584.45 9.255.991 13.861 1.387 11.837 7.437 20.097 18.701 24.327 4.132 1.552 8.368 2.068 13.072 1.01zm-28.471-54c-1.779.448-3.201-.27-4.666-1.753 2.51-.625 4.724-.868 7.103-.963-.195 1.546-1.107 2.38-2.435 2.716zm58.332 69.126c-.155-1.141-1.13-1.643-1.896-2.238-3.384-2.636-7.345-3.57-11.543-3.646-2.506-.047-4.986-.233-7.347-1.112-1.084-.4-2.298-.92-2.268-2.318.027-1.422 1.263-1.823 2.388-2.159.92-.272 1.87-.45 2.917-.695-2.661-1.706-5.261-1.941-8.726-.547-5.456 2.19-10.833 1.932-16.27-.03-3.07-1.11-5.795-2.85-8.63-4.39l-.078.055a5.395 5.395 0 0 0 .072-.054c-.07-.213-.195-.219-.359-.098l.222.195c2.351 3.855 5.53 6.957 9.121 9.608 6.914 5.103 14.465 8.148 23.302 6.798a121.601 121.601 0 0 1 8.608-1.008c3.61-.292 7.047.726 10.487 1.639zm-16.66-55.31c-.192-.138-.376-.484-.767-.126 3.181 4.302 7.264 7.47 12.182 9.466 7.936 3.221 15.991 3.773 24.23.93 6.397-2.206 10.995-.051 13.384 6.16.346-7.209-3.896-12.462-10.65-13.49-3.8-.58-7.31.68-10.867 1.713-9.905 2.872-19.112 1.455-27.513-4.653zm49.367 28.116c1.29.107 2.582.224 3.872.337-2.916-2.56-6.47-2.765-10.067-2.56-5.473.31-9.417 3.47-13.014 7.24-3.17 3.326-6.034 7.055-10.76 8.392.08.142.1.214.122.214.636.009 1.272.038 1.907.009 6.868-.31 13.338-1.759 18.483-6.744 1.622-1.568 3.07-3.311 4.636-4.94 1.306-1.36 2.887-2.113 4.821-1.95zm-15.954-8.512c-5.125.449-9.576 2.568-13.757 5.364-3.22 2.15-6.66 3.168-10.529 2.497-.68-.12-1.366-.208-2.049-.31l-.023.284c.246.128.483.275.738.378.645.255 1.28.562 1.95.72 7.442 1.77 14.568.864 20.991-3.286 4.049-2.616 8.24-3.112 12.783-2.436.46.07.917.151 1.378.196.426.04.872.463 1.449.005-3.971-2.869-8.25-3.82-12.931-3.412zM76.366 43.298c2.688.093 5.364-.26 8.177-1.93-.825.072-1.172.072-1.508.138-3.875.772-7.351-.073-10.45-2.521-1.135-.898-2.29-1.775-3.442-2.656-4.563-3.488-9.797-4.656-15.52-4.556.091.28.1.474.198.574 6.229 6.297 13.435 10.637 22.545 10.95zm45.07 32.319c-3.853-3.823-9.026-4.314-13.812-.979 3.168.141 5.546 1.152 7.474 3.15a23.695 23.695 0 0 0 2.155 2.015c2.917 2.352 7.858 2.465 10.747.282-3.392-1.323-3.392-1.323-6.563-4.468zm-38.384 29.272c-3.386-6.306-9.079-7.728-15.657-7.305a17.62 17.62 0 0 1 5.426 2.534c1.532 1.068 2.82 2.388 4.09 3.745 2.514 2.685 6.44 4.33 9.043 3.774-1.195-.751-2.257-1.547-2.902-2.748zm31.516-35.215c0-.042.001-.081.004-.124l-.01.011.01-.01-.065-.008.038.032.022.097zM78.114 96.55a13.871 13.871 0 0 0-.132-.076.232.232 0 0 0 .027.079c.01.015.07 0 .106-.003zm-.132-.076-.015-.061-.015.018.015-.018-.04-.01.01.046.043.025z"
+      />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33" class="w-10">
+      <g clip-path="url(#prefix__clip0)">
+        <path
+          fill="#38bdf8"
+          fill-rule="evenodd"
+          d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
+          clip-rule="evenodd"
+        />
+      </g>
+      <defs>
+        <clipPath id="prefix__clip0"><path fill="#fff" d="M0 0h54v32.4H0z" /></clipPath>
+      </defs>
+    </svg>
+  </section>
+
+  <h2 class="font-semibold text-3xl mt-32 mb-8">
+    <.gradient_text>
+      Use in seconds
+    </.gradient_text>
+    <p class="text-xl font-medium text-gray-500">
+      Install the dependency, use the mix task, customise, use.
     </p>
+  </h2>
+
+  <div class="mx-auto md:flex-row flex-col flex justify-center gap-8 my-12">
+    <.code_snippet>
+      defp deps do
+      [
+      {:bloom, "~> 0.0.7"},
+      ]
+      end
+    </.code_snippet>
+    <.code_snippet>
+      mix bloom.install code_snippet
+    </.code_snippet>
   </div>
-</section>
+
+  <h2 class="font-semibold text-3xl mt-32 mb-8">
+    <.gradient_text>
+      Avatars! Avatars!
+    </.gradient_text>
+    <p class="text-xl font-medium text-gray-500">
+      From dicebear.fm (or your own images)
+    </p>
+  </h2>
+
+  <div class="flex flex-row flex-wrap gap-8">
+    <.avatar name="Alice" style="adventurer" />
+    <.avatar name="Bob" style="adventurer-neutral" />
+    <.avatar name="Charlie" style="avataaars" />
+    <.avatar name="Diana" style="avataaars-neutral" />
+    <.avatar name="Ethan" style="big-ears" />
+    <.avatar name="Fiona" style="big-ears-neutral" />
+    <.avatar name="George" style="big-smile" />
+    <.avatar name="Hannah" style="bottts" />
+    <.avatar name="Ian" style="bottts-neutral" />
+    <.avatar name="Julia" style="croodles" />
+    <.avatar name="Kevin" style="croodles-neutral" />
+    <.avatar name="Liam" style="fun-emoji" />
+    <.avatar name="Mia" style="icons" />
+    <.avatar name="Noah" style="identicon" />
+    <.avatar name="Olivia" style="initials" />
+    <.avatar name="Parker" style="lorelei" />
+    <.avatar name="Quinn" style="lorelei-neutral" />
+    <.avatar name="Ruby" style="micah" />
+    <.avatar name="Sam" style="miniavs" />
+    <.avatar name="Tina" style="notionists" />
+    <.avatar name="Umar" style="notionists-neutral" />
+    <.avatar name="Violet" style="open-peeps" />
+    <.avatar name="Will" style="personas" />
+    <.avatar name="Xena" style="pixel-art" />
+    <.avatar name="Yara" style="pixel-art-neutral" />
+    <.avatar name="Zack" style="rings" />
+    <.avatar name="Amelia" style="shapes" />
+    <.avatar name="Ben" style="thumbs" />
+    <.avatar name="Ben" img_src="https://picsum.photos/64" />
+  </div>
+
+  <h2 class="font-semibold text-3xl mt-32 mb-8">
+    <.gradient_text>
+      Look, a bento grid Phoenix Component!
+    </.gradient_text>
+    <p class="text-xl font-medium text-gray-500">
+      For showing off features, or just for fun.
+    </p>
+  </h2>
+
+  <.bento_grid>
+    <.bento_card
+      name="Calendar Item"
+      icon="hero-calendar"
+      description="All the components in Bloom."
+      row_start={1}
+      row_end={3}
+      col_start={1}
+      col_end={2}
+    >
+      <.button class="border-white text-white font-medium text-xs items-center gap-2 flex flex-row">
+        Here's a button <.icon name="hero-arrow-right" class="h-4 w-4" />
+      </.button>
+    </.bento_card>
+    <.bento_card
+      name="Bell Bento"
+      icon="hero-bell"
+      description="All the components in Bloom."
+      row_start={1}
+      row_end={1}
+      col_start={2}
+      col_end={4}
+    >
+      <.button class="border-white text-white font-semibold">
+        Here's a button
+      </.button>
+    </.bento_card>
+    <.bento_card
+      name="Some sort of hat"
+      icon="hero-academic-cap"
+      description="All the components in Bloom."
+      row_start={3}
+      row_end={4}
+      col_start={1}
+      col_end={2}
+    >
+      <.button class="border-white text-white font-semibold">
+        Here's a button
+      </.button>
+    </.bento_card>
+    <.bento_card
+      name="Cloud Infrastructure"
+      icon="hero-cloud"
+      description="All the components in Bloom."
+      row_start={2}
+      row_end={4}
+      col_start={2}
+      col_end={3}
+    >
+      <.button class="border-white text-white font-semibold">
+        Here's a button
+      </.button>
+    </.bento_card>
+    <.bento_card
+      name="Tournament"
+      icon="hero-trophy"
+      description="All the components in Bloom."
+      row_start={2}
+      row_end={4}
+      col_start={3}
+      col_end={4}
+    >
+      <.button class="border-white text-white font-semibold">
+        Here's a button
+      </.button>
+    </.bento_card>
+  </.bento_grid>
+
+  <h2 class="font-semibold text-3xl mt-32 ">
+    <.gradient_text>
+      Marquee & Card Components
+    </.gradient_text>
+    <p class="text-xl font-medium text-gray-500">
+      Think social proof, showing company logos, and more.
+    </p>
+  </h2>
+  <div class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden bg-background py-20">
+    <.marquee repeat={5} vertical={false} pause_on_hover={true} reverse={true}>
+      <.card
+        image="https://picsum.photos/64"
+        title="Jack"
+        subheading="@faketwitter"
+        body="This is so cool."
+      />
+      <.card
+        image="https://picsum.photos/64"
+        title="Chris"
+        subheading="@codestirring"
+        body="Whoa, it's like shadcn for Elixir and Phoenix!"
+      />
+      <.card
+        image="https://picsum.photos/64"
+        title="Rhiannon"
+        subheading="@rhiality"
+        body="Just run mix bloom.install card"
+      />
+    </.marquee>
+    <.marquee repeat={5} vertical={false} pause_on_hover={true} reverse={false}>
+      <.card
+        image="https://picsum.photos/64"
+        title="Penny"
+        subheading="@widmore4eva"
+        body="I love that I can customise each component 🤩"
+      />
+      <.card
+        image="https://picsum.photos/64"
+        title="Desmond"
+        subheading="@hatchlover"
+        body="This will save me so much time!"
+      />
+      <.card
+        image="https://picsum.photos/64"
+        title="Ben Linus"
+        subheading="@jacob_fan_23"
+        body="Open source so anyone can use it for free!"
+      />
+    </.marquee>
+    <div class="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background">
+    </div>
+    <div class="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background">
+    </div>
+  </div>
+
+  <section class="mx-auto text-center flex justify-center flex-col gap-8 mt-24">
+    <h2>
+      <.gradient_text from_color="rose-400" to_color="purple-500" class="font-semibold text-3xl">
+        Missing a component you want? This is Open Source!
+      </.gradient_text>
+    </h2>
+    <.link href="https://github.com/chrisgreg/bloom/issues">
+      <.button class="border-white w-fit mx-auto px-6 py-4 flex flex-row gap-2 items-center text-white text-lg">
+        Request or add components here <.icon name="hero-arrow-right" class="h-6 w-6" />
+      </.button>
+    </.link>
+  </section>
+
+  <section class="bg-white">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+      <div class="flex justify-center mt-8 space-x-6">
+        <a href="https://twitter.com/@codestirring" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">Twitter</span>
+          <svg
+            class="w-6 h-6 text-rose-300 hover:text-rose-400 transition-all"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+          </svg>
+        </a>
+        <a href="https://github.com/chrisgreg/bloom" class="text-gray-400 hover:text-gray-500">
+          <span class="sr-only">GitHub</span>
+          <svg
+            class="w-6 h-6 text-rose-300 hover:text-rose-400 transition-all"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+      <p class="mt-32 font-semibold text-sm leading-6 text-center text-gray-400">
+        &copy; 2024 - made by
+        <a
+          href="https://twitter.com/@codestirring"
+          class="text-orange-400 hover:text-rose-500 transition-colors"
+        >
+          Chris Gregori
+        </a>
+      </p>
+    </div>
+  </section>
+</div>

@@ -81,7 +81,7 @@ defmodule Mix.Tasks.Bloom.Install do
     Mix.shell().info("Usage: mix bloom.install [component_name]")
 
     Mix.shell().info(
-      "Available components: glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee | sound_effect"
+      "Available components: avatar | glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee | sound_effect"
     )
   end
 

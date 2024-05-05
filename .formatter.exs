@@ -1,4 +1,11 @@
 # Used by "mix format"
 [
-  inputs: ["{mix,.formatter}.exs", "{config,lib,test}/**/*.{ex,exs}"]
+  plugins: [TailwindFormatter, Phoenix.LiveView.HTMLFormatter],
+  inputs: [
+    "{mix,.formatter}.exs",
+    "{config,lib,test}/**/*.{ex,exs}",
+    "*.{heex,ex,exs}",
+    "priv/*/seeds.exs",
+    "{config,lib,test}/**/*.{heex,ex,exs}"
+  ]
 ]

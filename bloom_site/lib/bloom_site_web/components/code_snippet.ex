@@ -1,7 +1,7 @@
 defmodule BloomSiteWeb.Components.CodeSnippet do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   Code snippet component
   """
 

@@ -1,7 +1,7 @@
 defmodule BloomSiteWeb.Components.Hero do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   Hero component
   """
 

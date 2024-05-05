@@ -1,7 +1,7 @@
 defmodule BloomSiteWeb.Components.BentoGrid do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   Bento grid component with bento cards.
 
   See `bento_card/1` for usage.

@@ -4,7 +4,7 @@ defmodule Bloom.MixProject do
   def project do
     [
       app: :bloom,
-      version: "0.0.6",
+      version: "0.0.7",
       elixir: "~> 1.16",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -39,7 +39,8 @@ defmodule Bloom.MixProject do
       {:phoenix_live_view, "~> 0.20"},
       {:phoenix_html, ">= 3.3.3"},
       {:mox, "~> 1.0", only: :test},
-      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
+      {:tailwind_formatter, "~> 0.4.0", only: [:dev, :test], runtime: false}
     ]
   end
 end
