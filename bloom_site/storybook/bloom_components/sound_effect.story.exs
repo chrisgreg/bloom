@@ -3,6 +3,8 @@ defmodule BloomSite.Storybook.BloomComponents.SoundEffect do
 
   def component, do: BloomSiteWeb.Components.SoundEffect
 
+  def container, do: :iframe
+
   def attributes, do: [%Attr{id: :disabled, type: :boolean, default: false}]
 
   def slots, do: [%Slot{id: :inner_block}]

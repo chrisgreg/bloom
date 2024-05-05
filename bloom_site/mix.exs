@@ -56,7 +56,7 @@ defmodule BloomSite.MixProject do
       {:plug_cowboy, "~> 2.5"},
       # {:bloom, "~> 0.0.5"},
       {:bloom, path: ".."},
-      {:phoenix_storybook, "~> 0.6.0"}
+      {:phoenix_storybook, path: "../../phoenix_storybook"}
     ]
   end
 
