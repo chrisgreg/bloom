@@ -3,7 +3,18 @@ defmodule BloomSiteWeb.Components.SoundEffect do
   A component to play sound effects in the user's browser
   triggered by Elixir events from the backend
 
-  The component itself renders a button for disabling sound effects
+  The component itself renders a button for disabling sound effects.
+  For accessibility, the user needs to be able to toggle sound effects on and off according to their preference.
+
+  Triggering a sound effect is done using the `play_sound` function in the Sound Effect module.
+
+  ```elixir
+  SoundEffect.play_sound("/audio/pop.mp3")
+  ```
+
+  The first argument needs to be the path to the sound file in your assets directory.
+
+  Audio assets need to be served by your own backend server. A convenient way to do this is to place them in the `assets/static` directory of your Phoenix application, and add `audio` to the `static_paths` function in your `_web` module.
   """
   use Phoenix.LiveComponent
 
