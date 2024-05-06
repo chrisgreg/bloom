@@ -13,13 +13,13 @@ defmodule Bloom.Components.Hero do
   def hero(assigns) do
     ~H"""
     <div class={["container mx-auto px-4 py-8", @class]}>
-      <div class="text-8xl text-center font-bold text-pretty">
+      <div class="text-pretty text-center text-8xl font-bold">
         <h1><%= render_slot(@inner_block) %></h1>
       </div>
-      <div class="mt-6 text-center text-2xl flex justify-center font-medium text-pretty">
+      <div class="text-pretty mt-6 flex justify-center text-center text-2xl font-medium">
         <%= render_slot(@subtitle) %>
       </div>
-      <div class="mt-14 flex justify-center flex-row gap-4 items-center">
+      <div class="mt-14 flex flex-row items-center justify-center gap-4">
         <%= render_slot(@actions) %>
       </div>
     </div>
