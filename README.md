@@ -28,7 +28,7 @@ Can be installed by adding `bloom` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:bloom, "~> 0.0.2"}
+    {:bloom, "~> 0.0.8"}
   ]
 end
 ```
@@ -50,6 +50,16 @@ Some components require Tailwind Config changes - refer to the component doc for
 ```
 mix bloom.install help
 ```
+
+#### Install Ecto-backed waitlist & landing page by running:
+
+```
+mix bloom.landing_page
+```
+
+You will need to run `mix ecto.gen.migration` to create the migration and copy and migrate the contents from waitlist.ex to complete.
+
+You will also need to add the generated LiveView to your router.
 
 ## Frequently Asked Questions
 

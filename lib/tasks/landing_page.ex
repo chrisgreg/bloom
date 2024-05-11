@@ -43,7 +43,7 @@ defmodule Mix.Tasks.Bloom.LandingPage do
     end)
 
     Mix.shell().info(
-      "Landing page generated - don't forget to run the migration specified in the waitlist.ex module"
+      "Landing page generated - don't forget to run the migration specified in the waitlist.ex module and add the liveview to your router."
     )
   end
 
