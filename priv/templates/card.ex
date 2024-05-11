@@ -15,12 +15,15 @@ defmodule <%= @module_name %>Web.Components.Card do
 
   def card(assigns) do
     ~H"""
-    <figure class={[
-      "relative w-64 cursor-pointer overflow-hidden rounded-xl border transition-all p-4",
-      "border-gray-200 bg-neutral-50-50 hover:bg-neutral-100 text-zinc-500",
-      "dark:border-gray-50 dark:bg-gray-50 dark:hover:bg-gray-50",
-      @class
-    ]} {@rest}>
+    <figure
+      class={[
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all",
+        "bg-neutral-50-50 border-gray-200 text-zinc-500 hover:bg-neutral-100",
+        "dark:border-gray-50 dark:bg-gray-50 dark:hover:bg-gray-50",
+        @class
+      ]}
+      {@rest}
+    >
       <div class="flex flex-row items-center gap-2">
         <img :if={assigns[:image]} class="rounded-full" width="32" height="32" alt="" src={@image} />
         <div class="flex flex-col">

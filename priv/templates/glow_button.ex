@@ -35,14 +35,15 @@ defmodule <%= @module_name %>Web.Components.GlowButton do
 
   def glow_button(assigns) do
     ~H"""
-      <div class={["w-fit relative", @parent_class]} {@rest}>
-        <div class={"group-hover:opacity-100 animate-tilt transition duration-1000 group-hover:duration-200 absolute blur-lg opacity-75 -inset-0.5 group-hover:-inset-1 bg-gradient-to-r from-#{@from_color} to-#{@to_color} rounded-lg"}></div>
-          <button class={["relative px-7 py-4 bg-black rounded-lg leading-none", @class]}>
-            <span class={"text-#{@text_color} font-medium group-hover:text-#{@from_color} transition-all duration-200"}>
-              <%%= render_slot(@inner_block) %>
-            </span>
-        </button>
+    <div class={["relative w-fit", @parent_class]} {@rest}>
+      <div class={"from-#{@from_color} to-#{@to_color} animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r opacity-75 blur-lg transition duration-1000 group-hover:-inset-1 group-hover:opacity-100 group-hover:duration-200"}>
       </div>
+      <button class={["relative rounded-lg bg-black px-7 py-4 leading-none", @class]}>
+        <span class={"text-#{@text_color} font-medium transition-all duration-200 group-hover:text-#{@from_color}"}>
+          <%%= render_slot(@inner_block) %>
+        </span>
+      </button>
+    </div>
     """
   end
 end

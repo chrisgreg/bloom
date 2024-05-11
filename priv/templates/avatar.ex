@@ -44,13 +44,13 @@ defmodule <%= @module_name %>Web.Components.Avatar do
   attr(:rest, :global)
 
   def avatar(assigns) do
+    image =
+      assigns[:img_src] ||
+        "https://api.dicebear.com/8.x/#{assigns[:style]}/svg?seed=#{assigns[:name]}"
+
     ~H"""
-    <div class={["flex items-center w-12 h-12", @class]} {@rest}>
-      <img
-        src={@img_src || "https://api.dicebear.com/7.x/#{@style}/svg?seed=#{@name}"}
-        alt={"#{@name} avatar"}
-        class="rounded-lg"
-      />
+    <div class={["flex h-12 w-12 items-center", @class]} {@rest}>
+      <img src={image} alt={"#{@name} avatar"} class="rounded-lg" />
     </div>
     """
   end
