@@ -39,7 +39,7 @@ defmodule Mix.Tasks.Bloom.InstallTest do
 
       expect(ShellMock, :info, fn msg ->
         assert msg ==
-                 "Available components: avatar | glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee"
+                 "Available components: avatar | glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee | badge"
       end)
 
       Mix.Tasks.Bloom.Install.run(["nonexistent_component"])
@@ -52,7 +52,7 @@ defmodule Mix.Tasks.Bloom.InstallTest do
 
       expect(ShellMock, :info, fn msg ->
         assert msg ==
-                 "Available components: avatar | glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee"
+                 "Available components: avatar | glow_button | code_snippet | hero | gradient_text | bento_grid | card | marquee | badge"
       end)
 
       Mix.Tasks.Bloom.Install.run([])
