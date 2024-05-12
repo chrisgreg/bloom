@@ -30,7 +30,8 @@ defmodule Mix.Tasks.Bloom.GenerateTemplates do
 
   defp convert_to_template(content) do
     content = content |> escape_eex_expressions()
-    Regex.replace(~r/Bloom.Components/, content, "<%= @module_name %>Web.Components")
+    content = Regex.replace(~r/Bloom.Components/, content, "<%= @module_name %>Web.Components")
+    Regex.replace(~r/Bloom.PubSub/, content, "<%= @module_name %>.PubSub")
   end
 
   defp escape_eex_expressions(content) do
