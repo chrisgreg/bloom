@@ -25,6 +25,10 @@ defmodule BloomSiteWeb.Router do
     live "/", LandingLive, :home
     live "/showcase", ShowcaseLive
     live_storybook("/storybook", backend_module: Elixir.BloomSiteWeb.Storybook)
+
+    live_session :landing do
+      live "/landing_page", LandingPageLive
+    end
   end
 
   # Other scopes may use custom stacks.

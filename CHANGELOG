@@ -2,6 +2,17 @@
 
 All notable changes to the "Bloom" project will be documented in this file.
 
+### [0.0.8] - 2024-05-11
+
+#### Added
+
+- Gradient blob component
+- Tailwind class formatting
+
+#### Changed
+
+- Updated hero component
+
 ### [0.0.7] - 2024-05-01
 
 #### Added

@@ -49,12 +49,8 @@ defmodule <%= @module_name %>Web.Components.Avatar do
         "https://api.dicebear.com/8.x/#{assigns[:style]}/svg?seed=#{assigns[:name]}"
 
     ~H"""
-    <div class={["flex items-center w-12 h-12", @class]} {@rest}>
-      <img
-        src={image}
-        alt={"#{@name} avatar"}
-        class="rounded-lg"
-      />
+    <div class={["flex h-12 w-12 items-center", @class]} {@rest}>
+      <img src={image} alt={"#{@name} avatar"} class="rounded-lg" />
     </div>
     """
   end

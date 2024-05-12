@@ -57,8 +57,8 @@ defmodule <%= @module_name %>Web.Components.Marquee do
         <div
           class={[
             "flex shrink-0 justify-around [gap:var(--gap)]",
-            @vertical && "flex-col animate-marquee-vertical",
-            !@vertical && "flex-row animate-marquee",
+            @vertical && "animate-marquee-vertical flex-col",
+            !@vertical && "animate-marquee flex-row",
             @pause_on_hover && "group-hover:[animation-play-state:paused]"
           ]}
           style={@reverse && "animation-direction: reverse;"}
