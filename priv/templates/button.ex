@@ -1,14 +1,13 @@
 defmodule <%= @module_name %>Web.Components.Button do
   use Phoenix.Component
 
-  @moduledoc """
+  @doc """
   An extension of the *core_components button*.
   The `<.button>` has the ability to handle a variant attribute.
   This makes it possible to have a `contained` or `outlined` look.
 
-  ## Examples
-  <.button>Send!</.button>
-  <.button variant="outlined">Outlined Button</.button>
+  ⚠️ Uninstall the core button component!
+  As you do not need two button components, the button component of the core phoenix_package can be deleted.
   """
 
   attr(:type, :string, default: nil)
