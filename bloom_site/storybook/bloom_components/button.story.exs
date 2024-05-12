@@ -1,7 +1,7 @@
 defmodule BloomSite.Storybook.BloomComponents.Button do
   use PhoenixStorybook.Story, :component
 
-  def function, do: &BloomSiteWeb.Components.Button.bloom_button/1
+  def function, do: &BloomSiteWeb.Components.Button.button/1
 
   def variations do
     [
