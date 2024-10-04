@@ -71,7 +71,6 @@ defmodule BloomSiteWeb.Components.Accordion do
         aria-labelledby={"#{@id}-header"}
         class={[
           "#{if @open, do: "block", else: "hidden"}",
-          "hero-#{if @open, do: "block", else: "hidden"}",
           "px-4 py-3",
           "bg-#{Map.get(panel, :color, "white")}",
           "text-#{Map.get(panel, :text_color, "gray-800")}"
